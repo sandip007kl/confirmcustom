@@ -46,6 +46,11 @@ static NSMutableArray *alertList = nil;
         
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
         
+      [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+ // Called when user taps outside
+    }]];
+     
+     
         if ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.3) {
             
             CGRect alertFrame = [UIScreen mainScreen].applicationFrame;
